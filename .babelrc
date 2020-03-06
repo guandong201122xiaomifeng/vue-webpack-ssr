@@ -1,0 +1,44 @@
+{
+    "presets":[
+        // "env",
+        "stage-1"
+    ],
+    "plugins":[
+        "transform-vue-jsx",
+        "syntax-dynamic-import"
+    ],
+    // babel的配置项，跟上面presets里面的插件env不一样
+    "env": {
+      "browser": {
+        "presets": [
+          [
+            "env",
+            // env的配置
+            {
+              // 目标要编译到的环境
+              "targets": {
+                // 要兼容哪些浏览器环境
+                "browsers": ["last 2 versions", "safari >= 7"]
+              }
+            }
+          ]
+        ]
+      },
+      "node": {
+        "presets": [
+          [
+            "env",
+            // env的配置
+            {
+              // 目标要编译到的环境
+              "targets": {
+                // current 会根据node版本，编译源代码，生成我们可以在当前环境
+                // 运行的代码
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "extends":"standard",
+    "plugins":[
+        "html"
+    ],
+    "parser":"babel-eslint",
+    "rules": {
+      "no-new": "off",
+      "indent": ["off", 2],
+      "space-before-function-paren": 0
+    }
+}
